@@ -1,6 +1,7 @@
 class Soldier {
   float spawnHeight;
   float spawnWidth;
+  float speed;
   PImage soldier;
 
 
@@ -9,7 +10,8 @@ class Soldier {
     imageMode(CENTER);
     soldier.resize(100, 100);
     spawnWidth = -50;
-    spawnHeight = random(50, 670);
+    spawnHeight = random(30, 670);
+    speed = random (1, 10);
   }
 
   void soldierSpawn() {
@@ -18,14 +20,13 @@ class Soldier {
 
   void soldierMove() {
     if (spawnWidth < width+100) {
-      spawnWidth += 1;
+      spawnWidth += speed;
     } else {
       spawnWidth = -100;
     }
   }
 
   void draw() {
-    background(255);
     soldierSpawn();
     soldierMove();
   }
