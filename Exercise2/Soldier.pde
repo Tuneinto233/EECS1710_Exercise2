@@ -1,15 +1,15 @@
 class Soldier {
-  float spawnHeight = random(50, 1230);
+  float spawnHeight;
   float spawnWidth;
   PImage soldier;
-
 
 
   Soldier() {
     soldier = loadImage("soldier.png");
     imageMode(CENTER);
+    soldier.resize(100, 100);
     spawnWidth = -50;
-    spawnHeight = random(50, 1230);
+    spawnHeight = random(50, 670);
   }
 
   void soldierSpawn() {
