@@ -9,3 +9,7 @@ void setup() {
 void draw() {
   soldier1.draw();
 }
+
+void mousePressed(){
+
+}
